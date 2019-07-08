@@ -14,7 +14,7 @@ exports[`AppTest should render correctly in "debug" mode 1`] = `
   <div
     className="Application-header"
   >
-    <_default
+    <ApplicationForm
       style={
         Object {
           "alignItems": "center",
