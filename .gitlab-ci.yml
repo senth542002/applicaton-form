@@ -1,0 +1,66 @@
+image: node:latest
+
+stages:
+  - build
+  - test
+  - format
+  - lint
+  #- push_to_amazon
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: build
+  script:
+    - npm install
+    - apt-get update
+    - apt-get --yes --force-yes install zip unzip
+    - npm run build
+    - ls -la build
+    - zip build.zip -r ./build
+  artifacts:
+    paths:
+      - build.zip
+formating:
+  stage: format
+  script:
+    - npm install -g husky lint-staged
+    - npm run format
+
+eslint:
+  stage: lint
+  script:
+    # Install ESLint in this docker container
+    - npm install -g eslint
+    # Configure ESLint (will read your .eslintrc file)
+    #- eslint --init
+    # Run ESLint
+    - npm run lint
+
+testing_testing:
+  stage: test
+  script:
+    - npm install npm@latest -g
+    - npm install --save react react-dom react-scripts
+    - npm install -g nyc
+    - npm test
+    - npm run coverage
+    #- mv .nyc_output/ coverage/
+  coverage: /All files\s*\|\s*([\d\.]+)/
+  artifacts:
+      paths:
+      - coverage/
+
+deploy:
+  stage: push_to_amazon
+  only:
+      - release
+  image: python:latest
+  script:
+    - pip install awscli
+    - unzip build.zip
+    #- cd build
+    - ls -la
+    - aws s3 sync build/ s3://create-todo-list

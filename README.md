@@ -66,3 +66,25 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+npm i --save-dev prettier-standard husky lint-staged
+
+npm install eslint --save-dev
+
+#Creating react application
+npm init react-app application-form
+
+#Starting react application
+npm start
+
+#Testing react application
+npm test
+
+#Installing testing framework Enzyme
+npm install --save-dev enzyme enzyme-adapter-react-16 enzyme-to-json
+npm install --save-dev react-test-renderer --dev
+
+#Installing Bootstrap css
+npm install bootstrap@3 --save
+npm install react-bootstrap --save
