@@ -1,3 +1,9 @@
+| Label | Image |
+| --- | --- |
+| Pipeline status | [![pipeline status](https://gitlab.com/senth542002/applicaton-form/badges/master/pipeline.svg)](https://gitlab.com/senth542002/applicaton-form/commits/master) |
+|Coverage report | [![coverage report](https://gitlab.com/senth542002/applicaton-form/badges/master/coverage.svg)](https://gitlab.com/senth542002/applicaton-form/commits/master) |
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -87,4 +93,4 @@ npm install --save-dev react-test-renderer --dev
 
 #Installing Bootstrap css
 npm install bootstrap@3 --save
-npm install react-bootstrap --save
+snpm install react-bootstrap --save

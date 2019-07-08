@@ -5,7 +5,7 @@ stages:
   - test
   - format
   - lint
-  #- push_to_amazon
+  - push_to_amazon
 
 cache:
   paths:
@@ -63,4 +63,4 @@ deploy:
     - unzip build.zip
     #- cd build
     - ls -la
-    - aws s3 sync build/ s3://create-todo-list
+    - aws s3 sync build/ s3://application-form
