@@ -21,7 +21,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js",
     "format": "prettier-standard 'src/**/*.js'",
-    "coverage": "react-scripts test --watchAll=false --coverage",
+    "coverage": "react-scripts test --watchAll=false --coverage --collectCoverageFrom=src/*js --collectCoverageFrom=!src/serviceWorker.js",
     "deploy": "aws s3 sync build/ s3://application-form"
   },
   "eslintConfig": {
