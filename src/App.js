@@ -9,10 +9,15 @@ function App () {
         <h2>Application Form</h2>
       </header>
       <div className='Application-header'>
-      <ApplicationForm style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }}/>
+        <ApplicationForm
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        />
       </div>
-      <div className='rows' script='display:inline;'>
-      </div>
+      <div className='rows' script='display:inline;' />
     </div>
   )
 }
