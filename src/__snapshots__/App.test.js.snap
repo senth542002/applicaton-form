@@ -17,9 +17,9 @@ exports[`AppTest should render correctly in "debug" mode 1`] = `
     <ApplicationForm
       style={
         Object {
-          "alignItems": "center",
+          "alignItems": "left",
           "display": "flex",
-          "justifyContent": "center",
+          "justifyContent": "left",
         }
       }
     />

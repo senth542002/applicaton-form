@@ -139,11 +139,11 @@ export default class ApplicationForm extends Component {
   render () {
     return (
       <form className='demoForm'>
-        <table className='responsive-table' hidden={this.state.successScreen}>
-          <tbody>
+        <table className='responsive-table' hidden={this.state.successScreen}
+        style={{ width: '500px'}}>
+        <tbody>
             <tr
               className='form-group'
-              tyle={{ border: '3px solid grey', borderRightColor: 'grey' }}
             >
               <td>
                 <label className='studentName'>Student Name: </label>
@@ -164,7 +164,6 @@ export default class ApplicationForm extends Component {
             </tr>
             <tr
               className='form-group'
-              style={{ border: '3px solid grey', borderRightColor: 'grey' }}
             >
               <td>
                 <label className='fatherName'>Father Name: </label>
@@ -183,7 +182,7 @@ export default class ApplicationForm extends Component {
                 </span>
               </td>
             </tr>
-            <tr style={{ border: '3px solid grey', borderRightColor: 'grey' }}>
+            <tr>
               <td>
                 <label className='motherName'>Mother Name: </label>
               </td>
@@ -201,7 +200,7 @@ export default class ApplicationForm extends Component {
                 </span>
               </td>
             </tr>
-            <tr style={{ border: '3px solid grey', borderRightColor: 'grey' }}>
+            <tr>
               <td>
                 <label className='email'>Email: </label>
               </td>
@@ -219,7 +218,7 @@ export default class ApplicationForm extends Component {
                 </span>
               </td>
             </tr>
-            <tr style={{ border: '3px solid grey', borderRightColor: 'grey' }}>
+            <tr>
               <td>
                 <label className='mobileNumber'>Mobile Number: </label>
               </td>
@@ -257,15 +256,13 @@ export default class ApplicationForm extends Component {
                 </span>
               </td>
             </tr>
-          </tbody>
-          <tbody>
-            <tr
-              style={{
-                border: '3px solid grey',
-                borderRightColor: 'grey',
-                alignItems: 'center'
-              }}
-            >
+            </tbody>
+            </table>
+
+            <table className='responsive-table' style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
+            hidden={this.state.successScreen}>
+            <tbody>
+            <tr>
               <td>
                 <button
                   className='submit'
@@ -276,7 +273,7 @@ export default class ApplicationForm extends Component {
                 </button>
               </td>
             </tr>
-          </tbody>
+            </tbody>
         </table>
         <table hidden={!this.state.successScreen}>
           <tbody>
