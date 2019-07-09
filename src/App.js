@@ -12,8 +12,8 @@ function App () {
         <ApplicationForm
           style={{
             display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
+            alignItems: 'left',
+            justifyContent: 'left'
           }}
         />
       </div>

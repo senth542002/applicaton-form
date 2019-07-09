@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ApplicationForm Component matches the snapshot 1`] = `
+<form
+  className="demoForm"
+>
+  <table
+    className="responsive-table"
+    hidden={false}
+    style={
+      Object {
+        "width": "500px",
+      }
+    }
+  >
+    <tbody>
+      <tr
+        className="form-group"
+      >
+        <td>
+          <label
+            className="studentName"
+          >
+            Student Name: 
+          </label>
+        </td>
+        <td>
+          <input
+            name="studentName"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </td>
+        <td>
+          <span
+            style={
+              Object {
+                "color": "red",
+              }
+            }
+          />
+        </td>
+      </tr>
+      <tr
+        className="form-group"
+      >
+        <td>
+          <label
+            className="fatherName"
+          >
+            Father Name: 
+          </label>
+        </td>
+        <td>
+          <input
+            name="fatherName"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </td>
+        <td>
+          <span
+            style={
+              Object {
+                "color": "red",
+              }
+            }
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="motherName"
+          >
+            Mother Name: 
+          </label>
+        </td>
+        <td>
+          <input
+            name="motherName"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </td>
+        <td>
+          <span
+            style={
+              Object {
+                "color": "red",
+              }
+            }
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="email"
+          >
+            Email: 
+          </label>
+        </td>
+        <td>
+          <input
+            name="email"
+            onChange={[Function]}
+            type="email"
+            value=""
+          />
+        </td>
+        <td>
+          <span
+            style={
+              Object {
+                "color": "red",
+              }
+            }
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="mobileNumber"
+          >
+            Mobile Number: 
+          </label>
+        </td>
+        <td>
+          <input
+            name="mobileNumber"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </td>
+        <td>
+          <span
+            style={
+              Object {
+                "color": "red",
+              }
+            }
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            className="dateOfBirth"
+          >
+            Date of Birth: 
+          </label>
+        </td>
+        <td>
+          <div
+            className="react-datepicker-wrapper"
+          >
+            <div
+              className="react-datepicker__input-container"
+            >
+              <input
+                className="dateOfBirth"
+                disabled={false}
+                name="dateOfBirth"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                readOnly={false}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </td>
+        <td>
+          <span
+            style={
+              Object {
+                "color": "red",
+              }
+            }
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table
+    className="responsive-table"
+    hidden={false}
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <tbody>
+      <tr>
+        <td>
+          <button
+            className="submit"
+            onClick={[Function]}
+            type="Submit"
+          >
+            Submit
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table
+    hidden={true}
+  >
+    <tbody>
+      <tr
+        style={
+          Object {
+            "border": "3px solid grey",
+            "borderRightColor": "grey",
+          }
+        }
+      >
+        <td>
+          <label
+            className="applicationNumber"
+          >
+            Your application applicaton Number is :
+             
+            
+          </label>
+        </td>
+      </tr>
+      <tr
+        style={
+          Object {
+            "border": "3px solid grey",
+            "borderRightColor": "grey",
+          }
+        }
+      >
+        <td>
+          <label
+            className="descripton"
+          >
+            Application receipt will is sent to your email
+             
+            
+          </label>
+        </td>
+      </tr>
+      <tr
+        style={
+          Object {
+            "alignItems": "center",
+            "border": "3px solid grey",
+            "borderRightColor": "grey",
+          }
+        }
+      >
+        <td>
+          <button
+            className="back"
+            onClick={[Function]}
+            type="Submit"
+          >
+            Back
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+`;

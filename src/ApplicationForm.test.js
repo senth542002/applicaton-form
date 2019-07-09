@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import { renderer } from 'react-test-renderer'
 import ApplicationForm from './ApplicationForm'
+import renderer from 'react-test-renderer'
 
 describe('ApplicationForm Component', () => {
   it('Verify Student Name', () => {
@@ -63,5 +63,10 @@ describe('ApplicationForm Component', () => {
       dateOfBirth: 'Cannot be empty'
     }
     expect(component.state().errors).toEqual(errors)
+  })
+
+  it('matches the snapshot', () => {
+    const tree = renderer.create(<ApplicationForm />).toJSON()
+    expect(tree).toMatchSnapshot()
   })
 })
