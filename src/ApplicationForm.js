@@ -90,7 +90,7 @@ export default class ApplicationForm extends Component {
     }
 
     if (!student['dateOfBirth']) {
-      formIsValid = true
+      formIsValid = false
       errors['dateOfBirth'] = 'Cannot be empty'
     }
 
@@ -140,11 +140,10 @@ export default class ApplicationForm extends Component {
     return (
       <form className='demoForm'>
         <table className='responsive-table' hidden={this.state.successScreen}
-        style={{ width: '500px'}}>
+        style={{width: "110%"}}>
         <tbody>
             <tr
-              className='form-group'
-            >
+              className='form-group'>
               <td>
                 <label className='studentName'>Student Name: </label>
               </td>
@@ -154,6 +153,7 @@ export default class ApplicationForm extends Component {
                   name='studentName'
                   value={this.state.student.studentName}
                   onChange={this.handleChange('studentName')}
+                  style={{width: 300}}
                 />
               </td>
               <td>
@@ -174,6 +174,7 @@ export default class ApplicationForm extends Component {
                   name='fatherName'
                   value={this.state.student.fatherName}
                   onChange={this.handleChange('fatherName')}
+                  style={{width: 300}}
                 />
               </td>
               <td>
@@ -192,6 +193,7 @@ export default class ApplicationForm extends Component {
                   name='motherName'
                   value={this.state.student.motherName}
                   onChange={this.handleChange('motherName')}
+                  style={{width: 300}}
                 />
               </td>
               <td>
@@ -210,6 +212,7 @@ export default class ApplicationForm extends Component {
                   name='email'
                   value={this.state.student.email}
                   onChange={this.handleChange('email')}
+                  style={{width: 300}}
                 />
               </td>
               <td>
@@ -228,6 +231,7 @@ export default class ApplicationForm extends Component {
                   name='mobileNumber'
                   value={this.state.student.mobileNumber}
                   onChange={this.handleChange('mobileNumber')}
+                  style={{width: 300}}
                 />
               </td>
               <td>
@@ -259,9 +263,10 @@ export default class ApplicationForm extends Component {
             </tbody>
             </table>
 
-            <table className='responsive-table' style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
-            hidden={this.state.successScreen}>
-            <tbody>
+            <table className='responsive-table' hidden={this.state.successScreen}
+            style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
+            >
+            <tbody hidden={this.state.successScreen}>
             <tr>
               <td>
                 <button
@@ -269,7 +274,7 @@ export default class ApplicationForm extends Component {
                   type='Submit'
                   onClick={this.submitFormHandler}
                 >
-                  Submit
+                  Submit{this.state.successScreen}
                 </button>
               </td>
             </tr>
