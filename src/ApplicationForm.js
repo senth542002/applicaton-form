@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import API from './api';
+import LoadingOverlay from 'react-loading-overlay'
+import BounceLoader from 'react-spinners/BounceLoader'
 
 export default class ApplicationForm extends Component {
   constructor () {
@@ -18,7 +20,8 @@ export default class ApplicationForm extends Component {
       successScreen: false,
       applicationNumber: '',
       isFormValid: false,
-      errors: {}
+      errors: {},
+      active: false
     }
 
     this.submitFormHandler.bind(this)
@@ -104,6 +107,9 @@ export default class ApplicationForm extends Component {
     let isFormValid = this.handleValidation()
     if (isFormValid) {
       console.log('Validaton Success')
+      this.setState({
+        active: true
+      })
       API.post('/api/applications', this.state.student)
         .then(res => {
           console.log(res)
@@ -111,11 +117,15 @@ export default class ApplicationForm extends Component {
           this.setState({
             successScreen: true,
             applicationNumber: Math.floor(100000 + Math.random() * 900000),
-            isFormValid: isFormValid
+            isFormValid: isFormValid,
+            active: false
           })
         })
         .catch(error => {
           console.log(error)
+          this.setState({
+            active: false
+          })
         })
     } else {
       console.log('Validaton Errors')
@@ -140,6 +150,7 @@ export default class ApplicationForm extends Component {
       this.setState({ student })
     }
   }
+
 
   render () {
     return (
@@ -267,7 +278,9 @@ export default class ApplicationForm extends Component {
             </tr>
             </tbody>
             </table>
-
+            <div className='sweet-loading'>
+            <LoadingOverlay active={this.state.active} spinner={<BounceLoader />} />
+             </div>
             <table className='responsive-table' hidden={this.state.successScreen}
             style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
             >
