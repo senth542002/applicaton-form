@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
+import API from './api';
 
 export default class ApplicationForm extends Component {
   constructor () {
     super()
     this.state = {
       student: {
-        studentName: '',
+        name: '',
         fatherName: '',
         motherName: '',
         email: '',
@@ -29,15 +30,15 @@ export default class ApplicationForm extends Component {
     let errors = {}
     let formIsValid = true
 
-    if (!student['studentName']) {
+    if (!student['name']) {
       formIsValid = false
-      errors['studentName'] = 'Cannot be empty'
+      errors['name'] = 'Cannot be empty'
     }
 
-    if (typeof student['studentName'] != 'undefined') {
-      if (!student['studentName'].match(/^[a-zA-Z ]+$/)) {
+    if (typeof student['name'] != 'undefined') {
+      if (!student['name'].match(/^[a-zA-Z ]+$/)) {
         formIsValid = false
-        errors['studentName'] = 'Only letters'
+        errors['name'] = 'Only letters'
       }
     }
 
@@ -103,11 +104,19 @@ export default class ApplicationForm extends Component {
     let isFormValid = this.handleValidation()
     if (isFormValid) {
       console.log('Validaton Success')
-      this.setState({
-        successScreen: true,
-        applicationNumber: Math.floor(100000 + Math.random() * 900000),
-        isFormValid: isFormValid
-      })
+      API.post('/api/applications', this.state.student)
+        .then(res => {
+          console.log(res)
+          console.log(res.data)
+          this.setState({
+            successScreen: true,
+            applicationNumber: Math.floor(100000 + Math.random() * 900000),
+            isFormValid: isFormValid
+          })
+        })
+        .catch(error => {
+          console.log(error)
+        })
     } else {
       console.log('Validaton Errors')
     }
@@ -121,10 +130,6 @@ export default class ApplicationForm extends Component {
   handleChange = value => event => {
     if (value === 'dateOfBirth') {
       console.log(value + ' ' + event)
-      // this.setState({
-      //   ...this.state,
-      //   [value] : event
-      // })
       let student = this.state.student
       student[value] = event
       this.setState({ student })
@@ -145,20 +150,20 @@ export default class ApplicationForm extends Component {
             <tr
               className='form-group'>
               <td>
-                <label className='studentName'>Student Name: </label>
+                <label className='name'>Student Name: </label>
               </td>
               <td>
                 <input
                   type='text'
-                  name='studentName'
-                  value={this.state.student.studentName}
-                  onChange={this.handleChange('studentName')}
+                  name='name'
+                  value={this.state.student.name}
+                  onChange={this.handleChange('name')}
                   style={{width: 300}}
                 />
               </td>
               <td>
                 <span style={{ color: 'red' }}>
-                  {this.state.errors['studentName']}
+                  {this.state.errors['name']}
                 </span>
               </td>
             </tr>
