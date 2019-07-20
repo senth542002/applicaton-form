@@ -29,6 +29,7 @@ export default class ApplicationForm extends Component {
   }
 
   handleValidation () {
+    console.log('inside handle Validation');
     let student = this.state.student
     let errors = {}
     let formIsValid = true
@@ -49,6 +50,8 @@ export default class ApplicationForm extends Component {
       formIsValid = false
       errors['fatherName'] = 'Cannot be empty'
     }
+
+    console.log("FatherName Validation:"+formIsValid);
 
     if (typeof student['fatherName'] != 'undefined') {
       if (!student['fatherName'].match(/^[a-zA-Z ]+$/)) {
@@ -103,8 +106,8 @@ export default class ApplicationForm extends Component {
   }
 
   submitFormHandler = event => {
-    event.preventDefault()
-    let isFormValid = this.handleValidation()
+    event.preventDefault();
+    let isFormValid = this.handleValidation();
     if (isFormValid) {
       console.log('Validaton Success')
       this.setState({
@@ -112,8 +115,8 @@ export default class ApplicationForm extends Component {
       })
       API.post('/api/applications', this.state.student)
         .then(res => {
-          console.log(res)
-          console.log(res.data)
+          console.log("Response:"+res)
+          //console.log(res.data)
           this.setState({
             successScreen: true,
             applicationNumber: Math.floor(100000 + Math.random() * 900000),
@@ -122,13 +125,26 @@ export default class ApplicationForm extends Component {
           })
         })
         .catch(error => {
-          console.log(error)
+          console.log("Error:"+error)
           this.setState({
             active: false
           })
         })
+
+      // this.setState({
+      //       successScreen: true,
+      //       applicationNumber: Math.floor(100000 + Math.random() * 900000),
+      //       isFormValid: isFormValid,
+      //       active: false
+      //     })
     } else {
-      console.log('Validaton Errors')
+      console.log('Validaton Errors:')
+      console.log(this.state.errors['name']);
+      console.log(this.state.errors['fatherName']);
+      console.log(this.state.errors['motherName']);
+      console.log(this.state.errors['email']);
+      console.log(this.state.errors['mobileNumber']);
+      console.log(this.state.errors['dateOfBirth']);
     }
   }
 
@@ -278,9 +294,9 @@ export default class ApplicationForm extends Component {
             </tr>
             </tbody>
             </table>
-            <div className='sweet-loading'>
-            <LoadingOverlay active={this.state.active} spinner={<BounceLoader />} />
-             </div>
+            <div>
+              <LoadingOverlay active={this.state.active} spinner={<BounceLoader />} />
+            </div>
             <table className='responsive-table' hidden={this.state.successScreen}
             style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
             >
