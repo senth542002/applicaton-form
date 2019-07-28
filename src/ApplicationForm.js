@@ -5,9 +5,7 @@ import applicationFormAPI from './ApplicationFormApi';
 import pdfGeneratorAPI from './PdfGeneratorApi';
 import LoadingOverlay from 'react-loading-overlay';
 import BounceLoader from 'react-spinners/BounceLoader';
-import FileSaver from 'file-saver';
 import FileDownload from 'js-file-download';
-import axios from 'axios'
 
 export default class ApplicationForm extends Component {
   constructor () {
