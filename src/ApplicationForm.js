@@ -165,53 +165,14 @@ export default class ApplicationForm extends Component {
         active: true
       })
       console.log("before Call Pdf:"+this.state.student.name);
-      alert('before api call')
 
-
-     /*axios({
-       url:'https://pdf-generater.herokuapp.com/api/generate',
-       method:'GET',
-       responseType: 'blob',
-     }).then((response) => {
-       console.log("Response:" + response.data);
-  const url = window.URL.createObjectURL(new Blob([response.data]));
-  const link = document.createElement('a');
-  link.href = url;
-  link.setAttribute('download', 'file.pdf');
-  document.body.appendChild(link);
-  link.click();
-});*/
-      pdfGeneratorAPI.post('https://pdf-generater.herokuapp.com/api/generate',this.state.student, { responseType: 'blob'})
+      pdfGeneratorAPI.post('/api/generate',this.state.student, { responseType: 'blob'})
         .then(res => {
-          // alert('got response')
            console.log("Response:" + res.data);
               this.setState({
                 active: false
               })
-             // let blob = new Blob([res.data],{type: 'application/pdf'});
-             // FileSaver.saveAs(blob, 'ApplicationForm.pdf')
             FileDownload(res.data, 'ApplicationForm.pdf');
-
-              // const url = window.URL.createObjectURL(new Blob([res.data]));
-              // const link = document.createElement('a');
-              // link.href = url;
-              // link.setAttribute('download', 'file.pdf');
-              // document.body.appendChild(link);
-              // link.click();
-
-            // Log somewhat to show that the browser actually exposes the custom HTTP header
-            // console.log("REsponse Headers:"+res.headers[0]);
-            // const fileNameHeader = "X-Suggested-Filename";
-            // const suggestedFileName = res.headers['Content-Type'];
-            // const effectiveFileName = (suggestedFileName === undefined
-            //     ? "foo.pdf"
-            //     : suggestedFileName);
-            //     console.log('Effective File Name:'+effectiveFileName);
-                // console.log("Received header [" + fileNameHeader + "]: " + suggestedFileName
-                // + ", effective fileName: " + effectiveFileName);
-
-                // Let the user save the file.
-              //  FileSaver.saveAs(res.data, effectiveFileName);
         })
         .catch(error => {
           console.log("Error:"+error)
