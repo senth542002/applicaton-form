@@ -12,12 +12,12 @@ export default class ApplicationForm extends Component {
     super()
     this.state = {
       student: {
-        name: 'Varun Karthik',
-        fatherName: 'Senthil Kumar',
-        motherName: 'Priya',
-        email: 'senth542002@gmail.com',
-        mobileNumber: '9940206385',
-        dateOfBirth: new Date()
+        name: '',
+        fatherName: '',
+        motherName: '',
+        email: '',
+        mobileNumber: '',
+        dateOfBirth: ''
       },
       successScreen: false,
       applicationNumber: '',
