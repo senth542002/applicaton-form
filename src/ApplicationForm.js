@@ -1,21 +1,25 @@
-import React, { Component } from 'react'
-import DatePicker from 'react-datepicker'
-import 'react-datepicker/dist/react-datepicker.css'
-import API from './api';
-import LoadingOverlay from 'react-loading-overlay'
-import BounceLoader from 'react-spinners/BounceLoader'
+import React, { Component } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import applicationFormAPI from './ApplicationFormApi';
+import pdfGeneratorAPI from './PdfGeneratorApi';
+import LoadingOverlay from 'react-loading-overlay';
+import BounceLoader from 'react-spinners/BounceLoader';
+import FileSaver from 'file-saver';
+import FileDownload from 'js-file-download';
+import axios from 'axios'
 
 export default class ApplicationForm extends Component {
   constructor () {
     super()
     this.state = {
       student: {
-        name: '',
-        fatherName: '',
-        motherName: '',
-        email: '',
-        mobileNumber: '',
-        dateOfBirth: ''
+        name: 'Varun Karthik',
+        fatherName: 'Senthil Kumar',
+        motherName: 'Priya',
+        email: 'senth542002@gmail.com',
+        mobileNumber: '9940206385',
+        dateOfBirth: new Date()
       },
       successScreen: false,
       applicationNumber: '',
@@ -113,13 +117,14 @@ export default class ApplicationForm extends Component {
       this.setState({
         active: true
       })
-      API.post('/api/applications', this.state.student)
+      //applicationNumber: Math.floor(100000 + Math.random() * 900000),
+      applicationFormAPI.post('/api/applications', this.state.student)
         .then(res => {
           console.log("Response:"+res)
-          //console.log(res.data)
+          console.log("Id:"+res.data.id)
           this.setState({
             successScreen: true,
-            applicationNumber: Math.floor(100000 + Math.random() * 900000),
+            applicationNumber: res.data.id,
             isFormValid: isFormValid,
             active: false
           })
@@ -130,21 +135,8 @@ export default class ApplicationForm extends Component {
             active: false
           })
         })
-
-      // this.setState({
-      //       successScreen: true,
-      //       applicationNumber: Math.floor(100000 + Math.random() * 900000),
-      //       isFormValid: isFormValid,
-      //       active: false
-      //     })
     } else {
       console.log('Validaton Errors:')
-      console.log(this.state.errors['name']);
-      console.log(this.state.errors['fatherName']);
-      console.log(this.state.errors['motherName']);
-      console.log(this.state.errors['email']);
-      console.log(this.state.errors['mobileNumber']);
-      console.log(this.state.errors['dateOfBirth']);
     }
   }
 
@@ -167,6 +159,69 @@ export default class ApplicationForm extends Component {
     }
   }
 
+  viewFormHandler = event => {
+
+    event.preventDefault();
+
+      this.setState({
+        active: true
+      })
+      console.log("before Call Pdf:"+this.state.student.name);
+      alert('before api call')
+
+
+     /*axios({
+       url:'https://pdf-generater.herokuapp.com/api/generate',
+       method:'GET',
+       responseType: 'blob',
+     }).then((response) => {
+       console.log("Response:" + response.data);
+  const url = window.URL.createObjectURL(new Blob([response.data]));
+  const link = document.createElement('a');
+  link.href = url;
+  link.setAttribute('download', 'file.pdf');
+  document.body.appendChild(link);
+  link.click();
+});*/
+      pdfGeneratorAPI.post('https://pdf-generater.herokuapp.com/api/generate',this.state.student, { responseType: 'blob'})
+        .then(res => {
+          // alert('got response')
+           console.log("Response:" + res.data);
+              this.setState({
+                active: false
+              })
+             // let blob = new Blob([res.data],{type: 'application/pdf'});
+             // FileSaver.saveAs(blob, 'ApplicationForm.pdf')
+            FileDownload(res.data, 'ApplicationForm.pdf');
+
+              // const url = window.URL.createObjectURL(new Blob([res.data]));
+              // const link = document.createElement('a');
+              // link.href = url;
+              // link.setAttribute('download', 'file.pdf');
+              // document.body.appendChild(link);
+              // link.click();
+
+            // Log somewhat to show that the browser actually exposes the custom HTTP header
+            // console.log("REsponse Headers:"+res.headers[0]);
+            // const fileNameHeader = "X-Suggested-Filename";
+            // const suggestedFileName = res.headers['Content-Type'];
+            // const effectiveFileName = (suggestedFileName === undefined
+            //     ? "foo.pdf"
+            //     : suggestedFileName);
+            //     console.log('Effective File Name:'+effectiveFileName);
+                // console.log("Received header [" + fileNameHeader + "]: " + suggestedFileName
+                // + ", effective fileName: " + effectiveFileName);
+
+                // Let the user save the file.
+              //  FileSaver.saveAs(res.data, effectiveFileName);
+        })
+        .catch(error => {
+          console.log("Error:"+error)
+          this.setState({
+            active: false
+          })
+        });
+  }
 
   render () {
     return (
@@ -320,7 +375,7 @@ export default class ApplicationForm extends Component {
               <td>
                 <label className='applicationNumber'>
                   Your application applicaton Number is :{' '}
-                  {this.state.applicationNumber}
+                  <a href= "#link" onClick={this.viewFormHandler} target="_blank">{this.state.applicationNumber}</a>
                 </label>
               </td>
             </tr>

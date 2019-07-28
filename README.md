@@ -93,4 +93,6 @@ npm install --save-dev react-test-renderer --dev
 
 #Installing Bootstrap css
 npm install bootstrap@3 --save
-snpm install react-bootstrap --save
+npm install react-bootstrap --save
+npm install file-saver
+npm install js-file-download
