@@ -6,7 +6,7 @@ import pdfGeneratorAPI from '../../api/PdfGeneratorApi';
 import LoadingOverlay from 'react-loading-overlay';
 import BounceLoader from 'react-spinners/BounceLoader';
 import FileDownload from 'js-file-download';
-import { hashHistory, browserHistory, Link, withRouter  } from 'react-router';
+import { browserHistory  } from 'react-router';
 
 export default class ApplicationForm extends Component {
   constructor () {
