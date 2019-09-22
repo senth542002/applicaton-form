@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import ApplicationForm from './ApplicationForm'
-import renderer from 'react-test-renderer'
-import mockAxios from 'jest-mock-axios';
+//import renderer from 'react-test-renderer'
+//import mockAxios from 'jest-mock-axios';
 
 describe('ApplicationForm Component', () => {
   it('Verify Student Name', () => {

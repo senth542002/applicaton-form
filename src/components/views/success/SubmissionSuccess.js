@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import pdfGeneratorAPI from '../../api/PdfGeneratorApi';
 import FileDownload from 'js-file-download';
-import { hashHistory, browserHistory, Link, withRouter  } from 'react-router';
+import { browserHistory } from 'react-router';
 
 class SubmissionSuccess extends Component {
 
