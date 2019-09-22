@@ -1,32 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppTest should render correctly in "debug" mode 1`] = `
-<div
-  className="App"
->
-  <header
-    className="App-header"
-  >
-    <h2>
-      Application Form
-    </h2>
-  </header>
-  <div
-    className="Application-header"
-  >
-    <ApplicationForm
-      style={
-        Object {
-          "alignItems": "left",
-          "display": "flex",
-          "justifyContent": "left",
-        }
-      }
-    />
-  </div>
-  <div
-    className="rows"
-    script="display:inline;"
-  />
-</div>
-`;
+exports[`AppTest should render correctly in "debug" mode 1`] = `<div />`;
