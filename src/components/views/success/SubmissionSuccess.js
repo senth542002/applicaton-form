@@ -44,7 +44,8 @@ class SubmissionSuccess extends Component {
 
       this.setState({
         active: true
-      })
+      });
+
       console.log("before Call Pdf:"+this.state.student.name);
 
       pdfGeneratorAPI.post('/api/generate',this.state.student, { responseType: 'blob'})

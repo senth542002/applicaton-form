@@ -8,18 +8,19 @@ import SubmissionSuccess from './SubmissionSuccess'
 describe('Submission Success Component', () => {
 
     var props =  {
-           location: {pathname: "/success", state: {
-                                                            student: {
-                                                              name: 'Varun',
-                                                              fatherName: 'Senthil Kumar',
-                                                              motherName: 'Priya',
-                                                              email: 'senth542002@gmail.com',
-                                                              mobileNumber: '9940206385',
-                                                              dateOfBirth: '2019-07-08',
-                                                            },
-                                                            successScreen: false,
-                                                            applicationNumber: 114,}},
-           showUrl: (url) => {}
+           location: { pathname: "/success",
+                       state: {
+                                student: {
+                                  name: 'Varun',
+                                  fatherName: 'Senthil Kumar',
+                                  motherName: 'Priya',
+                                  email: 'senth542002@gmail.com',
+                                  mobileNumber: '9940206385',
+                                  dateOfBirth: '2019-07-08',
+                                  applicationNumber: 114,
+                                },
+                                successScreen: false,
+                                applicationNumber: 114,}},
          }
 
       it('Verify Application Number', () => {
