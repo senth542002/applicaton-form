@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import ApplicationForm from './ApplicationForm'
-import renderer from 'react-test-renderer'
-import mockAxios from 'jest-mock-axios';
+//import renderer from 'react-test-renderer'
+//import mockAxios from 'jest-mock-axios';
 
 describe('ApplicationForm Component', () => {
   it('Verify Student Name', () => {
@@ -20,7 +20,6 @@ describe('ApplicationForm Component', () => {
   })
 
   it('Navigates to success screen', () => {
-
     const component = mount(<ApplicationForm />)
 
     let input = component.find('input').at(0)
@@ -45,7 +44,7 @@ describe('ApplicationForm Component', () => {
 
     var student = component.state().student
     //student['dateOfBirth'] = new Date('2019-07-08')
-    student['dateOfBirth'] = new Date();
+    student['dateOfBirth'] = new Date()
     component.setState({ student: student })
     //const submitButton = component.find('button').at(0)
     //submitButton.simulate('click')
