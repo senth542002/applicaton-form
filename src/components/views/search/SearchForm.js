@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { browserHistory, Link } from 'react-router'
+import { Link } from 'react-router'
 import applicationFormAPI from '../../api/ApplicationFormApi'
 import SearchResults from './SearchResults.js'
 
