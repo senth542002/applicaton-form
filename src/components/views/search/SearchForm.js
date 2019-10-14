@@ -48,7 +48,7 @@ export default class SearchForm extends Component {
               <tbody>
                 <tr className='form-group'>
                   <td>
-                    <label className='applicationNumber'>
+                    <label className='applicationNumber' id='applicationNumber'>
                       Application Number:{' '}
                     </label>
                   </td>
@@ -65,6 +65,7 @@ export default class SearchForm extends Component {
                     <button
                       className='submit'
                       type='Submit'
+                      name='search'
                       onClick={this.submitFormHandler}
                     >
                       Search
