@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router'
+import React from 'react'
 import applicationFormAPI from '../../api/ApplicationFormApi'
 import SearchResults from './SearchResults.js'
 import Grid from '@material-ui/core/Grid'
@@ -51,7 +50,7 @@ export default function SearchForm () {
   const classes = useStyles()
 
   const [applicationNumber, setApplicationNumber] = React.useState(0)
-  const [mobileNumber, setMobileNumber] = React.useState('')
+  //const [mobileNumber, setMobileNumber] = React.useState('')
 
   const [student, setStudent] = React.useState([])
 

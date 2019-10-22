@@ -1,12 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router'
 import { makeStyles } from '@material-ui/core/styles'
-import FormLabel from '@material-ui/core/FormLabel'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
-import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
-import CssBaseline from '@material-ui/core/CssBaseline'
 
 const useStyles = makeStyles(theme => ({
   container: {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import pdfGeneratorAPI from '../../api/PdfGeneratorApi'
 import FileDownload from 'js-file-download'
 import { browserHistory } from 'react-router'

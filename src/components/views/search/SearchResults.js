@@ -1,6 +1,5 @@
 import ReactTable from 'react-table'
-import React, { Component } from 'react'
-import 'react-table/react-table.css'
+import React from 'react'
 import Moment from 'moment'
 import pdfGeneratorAPI from '../../api/PdfGeneratorApi'
 import FileDownload from 'js-file-download'
