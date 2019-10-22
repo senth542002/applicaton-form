@@ -50,7 +50,7 @@ export default function SearchForm () {
   const classes = useStyles()
 
   const [applicationNumber, setApplicationNumber] = React.useState(0)
-  //const [mobileNumber, setMobileNumber] = React.useState('')
+  const [mobileNumber, setMobileNumber] = React.useState('')
 
   const [student, setStudent] = React.useState([])
 
@@ -99,15 +99,6 @@ export default function SearchForm () {
           />
         </Grid>
         <Grid container justify='center'>
-          <Button
-            color='primary'
-            className={classes.button}
-            onClick={submitFormHandler}
-          >
-            Search
-          </Button>
-        </Grid>
-        <Grid container justify='center'>
           <Typography
             component='h1'
             variant='h2'
@@ -130,6 +121,15 @@ export default function SearchForm () {
             onChange={handleChange('mobileNumber')}
             margin='normal'
           />
+        </Grid>
+        <Grid container justify='center'>
+          <Button
+            color='primary'
+            className={classes.button}
+            onClick={submitFormHandler}
+          >
+            Search
+          </Button>
         </Grid>
       </form>
       <form className={classes.container} noValidate autoComplete='off'>
