@@ -12,7 +12,7 @@ describe('ApplicationFormValidator Component', () => {
       applicationNumber: 114
     }
     const validationResult = ApplicationFormValidator(student)
-    expect(validationResult.errors['name']).toEqual('Only letters')
+    expect(validationResult.errors['name']).toEqual('only letters')
     expect(validationResult.formIsValid).toEqual(false)
   })
 
@@ -26,7 +26,7 @@ describe('ApplicationFormValidator Component', () => {
       applicationNumber: 114
     }
     const validationResult = ApplicationFormValidator(student)
-    expect(validationResult.errors['name']).toEqual('Cannot be empty')
+    expect(validationResult.errors['name']).toEqual('cannot be empty')
     expect(validationResult.formIsValid).toEqual(false)
   })
 })

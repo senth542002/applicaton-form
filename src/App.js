@@ -5,11 +5,11 @@ import NavBar from './components/views/home/NavBar.js'
 class App extends Component {
   render () {
     return (
-    <div>
+      <div>
         <NavBar />
         <div>{this.props.children}</div>
-     </div>
-        )
+      </div>
+    )
   }
 }
 
