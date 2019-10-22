@@ -1,4 +1,3 @@
-import ReactTable from 'react-table'
 import React from 'react'
 import Moment from 'moment'
 import pdfGeneratorAPI from '../../api/PdfGeneratorApi'

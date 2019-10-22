@@ -58,6 +58,10 @@ export default function SearchForm () {
     setApplicationNumber(event.target.value)
   }
 
+  const handleMobileNumberChange = value => event => {
+    setMobileNumber(event.target.value)
+  }
+
   const submitFormHandler = event => {
     event.preventDefault()
     applicationFormAPI
@@ -118,7 +122,7 @@ export default function SearchForm () {
             InputProps={{ classes: { input: classes.textField } }}
             InputLabelProps={{ classes: { root: classes.textField } }}
             FormHelperTextProps={{ classes: { root: classes.textField } }}
-            onChange={handleChange('mobileNumber')}
+            onChange={handleMobileNumberChange('mobileNumber')}
             margin='normal'
           />
         </Grid>
