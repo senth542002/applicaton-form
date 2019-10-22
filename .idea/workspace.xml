@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f606305-ca12-4a34-997b-f7f8910982fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/views/home/HomeForm.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/home/HomeForm.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/views/search/SearchForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/search/SearchForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/views/search/SearchForm.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/search/SearchForm.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/views/search/SearchResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/views/search/SearchResults.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,42 +14,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/views/home/HomeForm.js">
+        <entry file="file://$PROJECT_DIR$/src/components/views/application/ApplicationForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+            <state>
+              <caret column="12" selection-start-column="12" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/views/search/SearchForm.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/views/success/SubmissionSuccess.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/views/search/SearchForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/views/application/ApplicationForm.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="46" column="11" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state>
+              <caret column="12" selection-start-column="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -58,26 +43,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/views/search/SearchResults.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-647">
-              <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+            <state relative-caret-position="-1157" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
+        <entry file="file://$PROJECT_DIR$/src/components/views/home/NavBar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="13" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="13" />
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/views/search/SearchForm.test.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/views/success/SubmissionSuccess.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="933">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
             </state>
           </provider>
         </entry>
@@ -85,17 +77,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/views/home/HomeForm.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="60">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/views/search/SearchForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="124" column="63" lean-forward="true" selection-start-line="124" selection-start-column="63" selection-end-line="124" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.css">
+        <entry file="file://$PROJECT_DIR$/src/components/views/home/HomeForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="32" />
+            <state relative-caret-position="90">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -108,7 +109,6 @@
       <find>submitFormHandler</find>
       <find>viewFormHandler</find>
       <find>name</find>
-      <find>active</find>
       <find>MockAdapter</find>
       <find>isFormValid</find>
       <find>successScreen</find>
@@ -117,6 +117,11 @@
       <find>Loading...</find>
       <find>browserHistory</find>
       <find>searchComponent.setState({ student: student })</find>
+      <find>active</find>
+      <find>import React \, \{Component\} from \'react\'\nimport \{makeStyles \} from \'\@material\-ui\/core\/styles\'\nimport MenuItem  from \'\@material\-ui\/core\/MenuItem\'\nimport TextField from \'\@material\-ui\/core\/TextField\'\nimport InputLabel from \'\@material\-ui\/core\/InputLabel\'\;\nimport Button from \'\@material\-ui\/core\/Button\'\;\nimport DateFnsUtils from \'\@date\-io\/date\-fns\'\;\nimport Grid from \'\@material\-ui\/core\/Grid\'\;\nimport \{ MuiPickersUtilsProvider\, KeyboardTimePicker\, KeyboardDatePicker\, \} from \'\@material\-ui\/pickers\'\;\nimport Typography from \'\@material\-ui\/core\/Typography\'\;\n\n\nconst useStyles \= makeStyles\(theme \=\&gt; \(\{\n  container\: \{\n    display\: \'flex\'\,\n    flexWrap\: \'wrap\'\,\n    fontSize\: 30\,\n  \}\,\n  textField\: \{\n    marginLeft\: theme\.spacing\(1\)\,\n    marginRight\: theme\.spacing\(1\)\,\n    width\: 325\,\n    fontSize\: 24\,\n  \}\,\n  dense\: \{\n    marginTop\: 19\,\n  \}\,\n  menu\: \{\n    width\: 200\,\n  \}\,\n  button\: \{\n      margin\: theme\.spacing\(1\)\,\n    \}\,\n  input\: \{\n      display\: \'none\'\,\n   \}\,\n  typography\: \{\n      flexGrow\: 1\,\n      fontWeight\: \'bold\'\,\n   \}\,\n  resize\:\{\n      fontSize\:25\n    \}\,\n\}\)\)\;\n\n\nexport default function ApplicationForm \(\) \{\n\nconst classes \= useStyles\(\)\;\n\nconst student \= \{\n            name\: \'\'\,\n            fatherName\: \'\'\,\n            motherName\: \'\'\,\n            email\: \'\'\,\n            mobileNumber\: \'\'\,\n            dateOfBirth\: new Date\(\'01 June 2017\'\)\n        \}\n\n  const \[values\, setValues\] \= React\.useState\(\{\n    name\: \'\'\,\n    fatherName\: \'\'\,\n    motherName\: \'\'\,\n    email\: \'\'\,\n    mobileNumber\: \'\'\,\n    dateOfBirth\: new Date\(\'01 June 2017\'\)\n  \}\)\;\n\n  const handleChange \= name \=\&gt; event \=\&gt; \{\n    if\(name\=\=\=\'dateOfBirth\'\) \{\n        setValues\(\{ \.\.\.values\, \[name\]\: event\}\)\;\n    \} else \{\n        setValues\(\{ \.\.\.values\, \[name\]\: event\.target\.value \}\)\;\n    \}\n\n  \}\;\n\n        return\(\n            \&lt;form className\=\{classes\.container\} noValidate autoComplete\=\&quot;off\&quot;\&gt;\n                \&lt;Grid container justify\=\&quot;center\&quot;\&gt;\n                    \&lt;Typography component\=\&quot;h1\&quot; variant\=\&quot;h2\&quot; className\=\{classes\.typography\} align\=\&quot;center\&quot;\&gt;\n                              Application Form\n                    \&lt;\/Typography\&gt;\n                \&lt;\/Grid\&gt;\n                \&lt;Grid container justify\=\&quot;center\&quot;\&gt;\n\n                    \&lt;TextField id\=\&quot;name\&quot; label\=\&quot;Student Name\&quot;  name\=\&quot;name\&quot;\n                    className\=\{classes\.textField\} value\=\{values\.name\}\n                    InputProps\=\{\{ classes\: \{ input\: classes\.textField\, \}\, \}\}\n                    InputLabelProps\=\{\{ classes\: \{ root\: classes\.textField\, \} \}\}\n                    onChange\=\{handleChange\(\'name\'\)\}\n                    margin\=\&quot;normal\&quot; \&gt;\n                    \&lt;\/TextField\&gt;\n                \&lt;\/Grid\&gt;\n                \&lt;Grid container justify\=\&quot;center\&quot;\&gt;\n                \&lt;TextField id\=\&quot;fatherName\&quot; label\=\&quot;Father Name\&quot; name\=\&quot;fatherName\&quot;\n                className\=\{classes\.textField\} value\=\{values\.fatherName\}\n                    InputProps\=\{\{ classes\: \{ input\: classes\.textField\, \}\, \}\}\n                    InputLabelProps\=\{\{ classes\: \{ root\: classes\.textField\, \} \}\}\n                onChange\=\{handleChange\(\'fatherName\'\)\}\n                margin\=\&quot;normal\&quot; \/\&gt;\n                \&lt;\/Grid\&gt;\n                \&lt;Grid container justify\=\&quot;center\&quot;\&gt;\n                \&lt;TextField id\=\&quot;motherName\&quot; label\=\&quot;Mother Name\&quot; name\=\&quot;motherName\&quot;\n                className\=\{classes\.textField\} value\=\{values\.motherName\}\n                onChange\=\{handleChange\(\'motherName\'\)\}\n                margin\=\&quot;normal\&quot; \/\&gt;\n                \&lt;\/Grid\&gt;\n                \&lt;Grid container justify\=\&quot;center\&quot;\&gt;\n                \&lt;TextField id\=\&quot;email\&quot; type\=\&quot;email\&quot; label\=\&quot;Email\&quot; name\=\&quot;email\&quot;\n                className\=\{classes\.textField\} value\=\{values\.email\}\n                onChange\=\{handleChange\(\'email\'\) \} autoComplete\=\&quot;email\&quot;\n                margin\=\&quot;normal\&quot;\/\&gt;\n                \&lt;\/Grid\&gt;\n                \&lt;Grid container justify\=\&quot;center\&quot;\&gt;\n                \&lt;TextField id\=\&quot;mobileNumber\&quot; type\=\&quot;mobileNumber\&quot; label\=\&quot;Mobile Number\&quot; name\=\&quot;mobileNumber\&quot;\n                className\=\{classes\.textField\} value\=\{values\.mobileNumber\}\n                onChange\=\{handleChange\(\'mobileNumber\'\) \}\n                margin\=\&quot;normal\&quot;\/\&gt;\n                \&lt;\/Grid\&gt;\n                \&lt;MuiPickersUtilsProvider utils\=\{DateFnsUtils\}\&gt;\n                \&lt;Grid container justify\=\&quot;center\&quot;\&gt;\n                \&lt;KeyboardDatePicker\n                      disableToolbar\n                      variant\=\&quot;inline\&quot;\n                      format\=\&quot;MM\/dd\/yyyy\&quot;\n                      margin\=\&quot;normal\&quot;\n                      id\=\&quot;dateOfBirth\&quot;\n                      label\=\&quot;Date of Birth\&quot;\n                      value\=\{values\.dateOfBirth\}\n                      minDate\=\{new Date\(\'01 Jan 2017\'\)\}\n                      maxDate\=\{new Date\(\'01 June 2017\'\)\}\n                      onChange\=\{handleChange\(\'dateOfBirth\'\) \}\n                      KeyboardButtonProps\=\{\{\n                        \'aria\-label\'\: \'change date\'\,\n                      \}\}\n                    \/\&gt;\n                   \&lt;\/Grid\&gt;\n                \&lt;\/MuiPickersUtilsProvider\&gt;\n                \&lt;Grid container justify\=\&quot;center\&quot;\&gt;\n                \&lt;Button color\=\&quot;primary\&quot; className\=\{classes\.button\}\&gt;\n                        Submit\n                      \&lt;\/Button\&gt;\n                \&lt;\/Grid\&gt;\n            \&lt;\/form\&gt;\n        \)\n\}\n\n</find>
+      <find>FatherName</find>
+      <find>LoadingOverlay</find>
+      <find />
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,25 +146,27 @@
         <option value="$PROJECT_DIR$/src/components/SubmissionSuccessForm.js" />
         <option value="$PROJECT_DIR$/src/components/views/ApplicationForm.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/components/views/application/ApplicationForm.test.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/__mocks__/axios.js" />
         <option value="$PROJECT_DIR$/src/__mocks__/axios.js" />
-        <option value="$PROJECT_DIR$/src/components/views/success/SubmissionSuccess.js" />
-        <option value="$PROJECT_DIR$/src/components/views/success/SubmissionSuccess.test.js" />
         <option value="$PROJECT_DIR$/src/components/views/application/ApplicationFromValidation.js" />
         <option value="$PROJECT_DIR$/src/components/views/application/ApplicationFromValidator.js" />
         <option value="$PROJECT_DIR$/src/components/views/application/ApplicationFormValidatorTest.js" />
-        <option value="$PROJECT_DIR$/src/components/views/application/ApplicationFormValidator.test.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/views/application/ApplicationForm.js" />
         <option value="$PROJECT_DIR$/src/routes.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/src/components/views/search/SearchResults.js" />
-        <option value="$PROJECT_DIR$/src/components/views/home/HomeForm.js" />
+        <option value="$PROJECT_DIR$/src/components/views/application/ApplicationFormValidator.js" />
+        <option value="$PROJECT_DIR$/src/components/views/application/ApplicationFormValidator.test.js" />
+        <option value="$PROJECT_DIR$/src/components/views/application/ApplicationForm.test.js" />
         <option value="$PROJECT_DIR$/src/components/views/home/HomeForm.test.js" />
-        <option value="$PROJECT_DIR$/src/components/views/search/SearchForm.js" />
+        <option value="$PROJECT_DIR$/src/components/views/success/SubmissionSuccess.test.js" />
         <option value="$PROJECT_DIR$/src/components/views/search/SearchForm.test.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/components/views/home/HomeForm.js" />
+        <option value="$PROJECT_DIR$/src/components/views/application/ApplicationForm.js" />
+        <option value="$PROJECT_DIR$/src/components/views/success/SubmissionSuccess.js" />
+        <option value="$PROJECT_DIR$/src/components/views/home/NavBar.js" />
+        <option value="$PROJECT_DIR$/src/components/views/search/SearchResults.js" />
+        <option value="$PROJECT_DIR$/src/components/views/search/SearchForm.js" />
       </list>
     </option>
   </component>
@@ -196,13 +203,6 @@
               <item name="application-form" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="application-form" type="b2602c69:ProjectViewProjectNode" />
-              <item name="application-form" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="application-form" type="b2602c69:ProjectViewProjectNode" />
@@ -252,11 +252,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571025143181" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/senthilkumar/Documents/workspace/reactjs/ApplicationForm/application-form/src/components/views/application/ApplicationForm.js" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571768200622" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/views/application" />
+      <recent name="$PROJECT_DIR$/src/components/views/home" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
@@ -337,13 +342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="31" column="128" selection-start-line="31" selection-start-column="128" selection-end-line="31" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/serviceWorker.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -361,22 +359,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/views/application/ApplicationFormValidator.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="71" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/api/ApplicationFormApi.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/views/success/SubmissionSuccess.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -385,90 +369,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/views/application/ApplicationFormValidator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/views/application/ApplicationForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="335" column="12" selection-start-line="335" selection-start-column="12" selection-end-line="335" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="32" />
+        <state relative-caret-position="412">
+          <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="15">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/views/success/SubmissionSuccess.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/components/views/application/ApplicationForm_Backup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="56" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="56" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="111">
           <caret line="42" column="13" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/views/home/HomeForm.js">
+    <entry file="file://$PROJECT_DIR$/src/components/views/application/ApplicationFormValidator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        <state relative-caret-position="1065">
+          <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/views/home/HomeForm.test.js">
+    <entry file="file://$PROJECT_DIR$/src/components/views/application/ApplicationFormValidator.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/views/search/SearchResults.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-647">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        <state relative-caret-position="75">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/views/application/ApplicationForm.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="46" column="11" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="11" />
+        <state relative-caret-position="-647">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/views/search/SearchForm.js">
+    <entry file="file://$PROJECT_DIR$/src/components/views/home/HomeForm.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="60">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/views/success/SubmissionSuccess.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="933">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/views/search/SearchForm.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="405">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/views/home/HomeForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/views/application/ApplicationForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/views/success/SubmissionSuccess.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/views/home/NavBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/views/search/SearchResults.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1157" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/views/search/SearchForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="124" column="63" lean-forward="true" selection-start-line="124" selection-start-column="63" selection-end-line="124" selection-end-column="63" />
         </state>
       </provider>
     </entry>

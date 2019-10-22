@@ -8,13 +8,13 @@ const Validator = student => {
 
   if (!student['name']) {
     formIsValid = false
-    errors['name'] = 'Cannot be empty'
+    errors['name'] = 'cannot be empty'
   }
 
   if (typeof student['name'] != 'undefined') {
     if (!student['name'].match(/^[a-zA-Z ]+$/)) {
       formIsValid = false
-      errors['name'] = 'Only letters'
+      errors['name'] = 'only letters'
     }
   }
 
@@ -28,51 +28,50 @@ const Validator = student => {
   if (typeof student['fatherName'] != 'undefined') {
     if (!student['fatherName'].match(/^[a-zA-Z ]+$/)) {
       formIsValid = false
-      errors['fatherName'] = 'Only letters'
+      errors['fatherName'] = 'only letters'
     }
   }
 
   if (!student['motherName']) {
     formIsValid = false
-    errors['motherName'] = 'Cannot be empty'
+    errors['motherName'] = 'cannot be empty'
   }
 
   if (typeof student['motherName'] != 'undefined') {
     if (!student['motherName'].match(/^[a-zA-Z ]+$/)) {
       formIsValid = false
-      errors['motherName'] = 'Only letters'
+      errors['motherName'] = 'only letters'
     }
   }
 
   if (!student['email']) {
     formIsValid = false
-    errors['email'] = 'Cannot be empty'
+    errors['email'] = 'cannot be empty'
   }
 
   if (typeof student['email'] != 'undefined') {
     if (!student['email'].match(/^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/)) {
       formIsValid = false
-      errors['email'] = 'Email is not valid'
+      errors['email'] = 'email is not valid'
     }
   }
 
   if (!student['mobileNumber']) {
     formIsValid = false
-    errors['mobileNumber'] = 'Cannot be empty'
+    errors['mobileNumber'] = 'cannot be empty'
   }
 
   if (typeof student['mobileNumber'] != 'undefined') {
     if (!student['mobileNumber'].match(/^[0]?[789]\d{9}$/)) {
       formIsValid = false
-      errors['mobileNumber'] = 'Mobile is not valid'
+      errors['mobileNumber'] = 'mobile number is not valid'
     }
   }
 
   if (!student['dateOfBirth']) {
     formIsValid = false
-    errors['dateOfBirth'] = 'Cannot be empty'
+    errors['dateOfBirth'] = 'cannot be empty'
   }
-
   const validationResult = { errors: errors, formIsValid: formIsValid }
 
   return validationResult
