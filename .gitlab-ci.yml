@@ -63,4 +63,4 @@ deploy:
     - unzip build.zip
     #- cd build
     - ls -la
-    - aws s3 sync build/ s3://application-form
+    - aws s3 sync build/ s3://application-form --region us-east-2
