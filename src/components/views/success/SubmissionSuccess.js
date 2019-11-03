@@ -1,6 +1,6 @@
 import React from 'react'
-import pdfGeneratorAPI from '../../api/PdfGeneratorApi'
-import FileDownload from 'js-file-download'
+//import pdfGeneratorAPI from '../../api/PdfGeneratorApi'
+//import FileDownload from 'js-file-download'
 import { browserHistory } from 'react-router'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
@@ -69,17 +69,23 @@ function SubmissionSuccess (props) {
 
     console.log('before Call Pdf:' + student.name)
 
-    pdfGeneratorAPI
-      .post('/api/generate', student, { responseType: 'blob' })
-      .then(res => {
-        console.log('Response:' + res.data)
-        setActive({ active: false })
-        FileDownload(res.data, 'ApplicationForm.pdf')
-      })
-      .catch(error => {
-        console.log('Error:' + error)
-        setActive({ active: false })
-      })
+//    pdfGeneratorAPI
+//      .post('/api/generate', student, { responseType: 'blob' })
+//      .then(res => {
+//        console.log('Response:' + res.data)
+//        setActive({ active: false })
+//        FileDownload(res.data, 'ApplicationForm.pdf')
+//      })
+//      .catch(error => {
+//        console.log('Error:' + error)
+//        setActive({ active: false })
+//      })
+    browserHistory.push({
+          pathname: 'viewApplication',
+          state: {
+            student: student
+          }
+        })
   }
 
   return (
@@ -111,15 +117,14 @@ function SubmissionSuccess (props) {
           className={classes.typography}
           align='center'
         >
-          Your application application Number is
           <LoadingOverlay active={active} spinner={<BounceLoader />} />
+          Your application application Number is
           <Link
             href='#'
             onClick={viewFormHandler}
             variant='body2'
             className={classes.button}
-          >
-            {student.applicationNumber}.
+          >{student.id}
           </Link>
         </Typography>
       </Grid>
@@ -130,7 +135,7 @@ function SubmissionSuccess (props) {
           className={classes.typography}
           align='center'
         >
-          Application soft copy will be sent to your email {student.email}.
+
         </Typography>
       </Grid>
       <Grid container justify='center'>

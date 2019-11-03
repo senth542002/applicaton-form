@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
  const submitFormHandler = event => {
     event.preventDefault()
 
-    const domElement = document.getElementById('page');
+  //  const domElement = document.getElementById('page');
 
 //     html2canvas(input)
 //            .then((canvas) => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import Moment from 'moment'
-import pdfGeneratorAPI from '../../api/PdfGeneratorApi'
-import FileDownload from 'js-file-download'
+//import pdfGeneratorAPI from '../../api/PdfGeneratorApi'
+//import FileDownload from 'js-file-download'
 import { makeStyles } from '@material-ui/core/styles'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
@@ -30,19 +30,19 @@ const useStyles = makeStyles({
   }
 })
 
-const viewFormHandler = student => event => {
-  console.log('Value:' + student)
-  pdfGeneratorAPI
-    .post('/api/generate', student, { responseType: 'blob' })
-    .then(res => {
-      console.log('Response:' + res.data)
-
-      FileDownload(res.data, 'ApplicationForm.pdf')
-    })
-    .catch(error => {
-      console.log('Error:' + error)
-    })
-}
+//const viewFormHandler = student => event => {
+//  console.log('Value:' + student)
+//  pdfGeneratorAPI
+//    .post('/api/generate', student, { responseType: 'blob' })
+//    .then(res => {
+//      console.log('Response:' + res.data)
+//
+//      FileDownload(res.data, 'ApplicationForm.pdf')
+//    })
+//    .catch(error => {
+//      console.log('Error:' + error)
+//    })
+//}
 
 const viewApplicationFormHandler = student => event => {
 event.preventDefault()
