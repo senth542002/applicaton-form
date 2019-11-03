@@ -62,7 +62,7 @@ export default function ApplicationForm () {
     email: '',
     mobileNumber: '',
     dateOfBirth: new Date('01 June 2017'),
-    applicationNumber: ''
+    id: ''
   })
 
   const [error, setError] = React.useState('')
@@ -104,7 +104,7 @@ export default function ApplicationForm () {
           console.log('Id:' + res.data.id)
 
           let newStudent = student
-          newStudent['applicationNumber'] = res.data.id
+          newStudent['id'] = res.data.id
           setStudent({ ...student, [student]: newStudent })
 
           setActive({ active: false })

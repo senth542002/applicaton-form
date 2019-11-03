@@ -1,7 +1,7 @@
 import React from 'react'
 import Moment from 'moment'
-import pdfGeneratorAPI from '../../api/PdfGeneratorApi'
-import FileDownload from 'js-file-download'
+//import pdfGeneratorAPI from '../../api/PdfGeneratorApi'
+//import FileDownload from 'js-file-download'
 import { makeStyles } from '@material-ui/core/styles'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
@@ -9,6 +9,7 @@ import TableCell from '@material-ui/core/TableCell'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Paper from '@material-ui/core/Paper'
+import { browserHistory } from 'react-router'
 
 const useStyles = makeStyles({
   root: {
@@ -29,17 +30,28 @@ const useStyles = makeStyles({
   }
 })
 
-const viewFormHandler = student => event => {
-  console.log('Value:' + student)
-  pdfGeneratorAPI
-    .post('/api/generate', student, { responseType: 'blob' })
-    .then(res => {
-      console.log('Response:' + res.data)
+//const viewFormHandler = student => event => {
+//  console.log('Value:' + student)
+//  pdfGeneratorAPI
+//    .post('/api/generate', student, { responseType: 'blob' })
+//    .then(res => {
+//      console.log('Response:' + res.data)
+//
+//      FileDownload(res.data, 'ApplicationForm.pdf')
+//    })
+//    .catch(error => {
+//      console.log('Error:' + error)
+//    })
+//}
 
-      FileDownload(res.data, 'ApplicationForm.pdf')
-    })
-    .catch(error => {
-      console.log('Error:' + error)
+const viewApplicationFormHandler = student => event => {
+event.preventDefault()
+console.log('Value:' + student)
+  browserHistory.push({
+      pathname: 'viewApplication',
+      state: {
+        student: student
+      }
     })
 }
 
@@ -77,7 +89,7 @@ export default function SearchResults ({ student }) {
           {student.map(row => (
             <TableRow key={row.name}>
               <TableCell align='left' className={classes.tableBodyCell}>
-                <a href='#link' onClick={viewFormHandler(row)}>
+                <a href='#link' onClick={viewApplicationFormHandler(row)}>
                   {row.id}
                 </a>
               </TableCell>
