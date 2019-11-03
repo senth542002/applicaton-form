@@ -9,6 +9,7 @@ import TableCell from '@material-ui/core/TableCell'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Paper from '@material-ui/core/Paper'
+import { browserHistory } from 'react-router'
 
 const useStyles = makeStyles({
   root: {
@@ -40,6 +41,17 @@ const viewFormHandler = student => event => {
     })
     .catch(error => {
       console.log('Error:' + error)
+    })
+}
+
+const viewApplicationFormHandler = student => event => {
+event.preventDefault()
+console.log('Value:' + student)
+  browserHistory.push({
+      pathname: 'viewApplication',
+      state: {
+        student: student
+      }
     })
 }
 
@@ -77,7 +89,7 @@ export default function SearchResults ({ student }) {
           {student.map(row => (
             <TableRow key={row.name}>
               <TableCell align='left' className={classes.tableBodyCell}>
-                <a href='#link' onClick={viewFormHandler(row)}>
+                <a href='#link' onClick={viewApplicationFormHandler(row)}>
                   {row.id}
                 </a>
               </TableCell>

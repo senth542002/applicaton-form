@@ -119,7 +119,7 @@ export default function SearchForm () {
             name='mobileNumber'
             className={classes.textField}
             value={mobileNumber}
-            InputProps={{ classes: { input: classes.textField } }}
+            InputProps={{ classes: { input: classes.textField } , disabled: true, readOnly: true }}
             InputLabelProps={{ classes: { root: classes.textField } }}
             FormHelperTextProps={{ classes: { root: classes.textField } }}
             onChange={handleMobileNumberChange('mobileNumber')}
