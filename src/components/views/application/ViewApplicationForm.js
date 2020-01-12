@@ -48,53 +48,17 @@ const useStyles = makeStyles(theme => ({
  const submitFormHandler = event => {
     event.preventDefault()
 
-  //  const domElement = document.getElementById('page');
+    html2canvas(document.getElementById("page"),
+                { onclone: (document) => {
+                 document.getElementById('print-button').style.visibility = 'hidden'
+                 }})
+                .then(canvas => {
 
-//     html2canvas(input)
-//            .then((canvas) => {
-//                const imgData = canvas.toDataURL('image/png');
-//                const pdf = new jsPDF('p', 'px', 'a4');
-//                var width = pdf.internal.pageSize.getWidth();
-//                var height = pdf.internal.pageSize.getHeight();
-//
-//                pdf.addImage(imgData, 'JPEG', 0, 0, width, height);
-//                pdf.save("test.pdf");
-//            });
-//    html2canvas(domElement, { onclone: (document) => {
-//        document.getElementById('print-button').style.visibility = 'hidden'
-//    }}).then((canvas) => {
-//        const imgData = canvas.toDataURL('image/jpg')
-//                const pdf = new jsPdf('p', 'mm', 'a3')
-//                pdf.addImage(imgData, 'JPEG', 15, 40, 180, 180)
-//                pdf.save('Student-Application.pdf')
-//    })
+                var imgData = canvas.toDataURL("image/png",1.0);
+                var pdf = new jsPDF('l','mm')
 
-//      html2canvas(domElement)
-//        .then((canvas) => {
-//            const imgData = canvas.toDataURL('image/png');
-
-//            const pdf = new jsPDF();
-//            pdf.addImage(imgData,'PNG',0,0);
-//            pdf.save('Student-Application.pdf')
-
-
-    html2canvas(document.getElementById("page"), { onclone: (document) => {
-                document.getElementById('print-button').style.visibility = 'hidden'
-           }}).then(canvas => {
-                //$("#previewBeforeDownload").html(canvas);
-                var imgData = canvas.toDataURL("image/jpeg",1);
-                var pdf = new jsPDF("p", "mm", "a4");
-                var pageWidth = pdf.internal.pageSize.getWidth();
-                var pageHeight = pdf.internal.pageSize.getHeight();
-                var imageWidth = canvas.width;
-                var imageHeight = canvas.height;
-
-                var ratio = imageWidth/imageHeight >= pageWidth/pageHeight ? pageWidth/imageWidth : pageHeight/imageHeight;
-                //pdf = new jsPDF(this.state.orientation, undefined, format);
-                pdf.addImage(imgData, 'JPEG', 0, 0, imageWidth * ratio, imageHeight * ratio);
+                pdf.addImage(imgData, "PNG", 0, 0);
                 pdf.save("Student-Application.pdf");
-                //$("#previewBeforeDownload").hide();
-                //$('#c-invoice').modal('hide');
             });
 
     }
@@ -126,7 +90,8 @@ function ViewApplicationForm(props) {
                   FormHelperTextProps={{ classes: { root: classes.textField } }}
                   margin='normal'
                 />
-
+              </Grid>
+              <Grid container justify='center'>
                   <TextField
                     id='name'
                     label='Student Name'
@@ -151,7 +116,8 @@ function ViewApplicationForm(props) {
                      FormHelperTextProps={{ classes: { root: classes.textField } }}
                      margin='normal'
                    />
-
+              </Grid>
+              <Grid container justify='center'>
                     <TextField
                       id='motherName'
                       label='Mother Name'
